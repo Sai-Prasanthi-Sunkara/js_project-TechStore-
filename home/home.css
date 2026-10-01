@@ -1,0 +1,227 @@
+/* hero section*/
+.hero {
+    position: relative;
+}
+
+.home_page_bgimg {
+    width: 100%;
+    height: auto;
+    margin-bottom: -65px;
+}
+
+.hero_content {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.page_caption {
+    color: #FFFF;
+}
+
+.sub_caption {
+    font-size: 20px;
+}
+
+.hero button {
+    background-color: #225fe3;
+    padding: 10px 20px;
+    border: none;
+    color: #ffff;
+    box-shadow: 2px 2px grey;
+    cursor: pointer;
+}
+
+.hero .buttons {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.8s ease;
+}
+
+.hero button:hover {
+    transform: scale(0.9);
+    border-radius: 5px;
+}
+
+.hero_content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.hero_content.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media(max-width: 768px) {
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .page_caption {
+        color: #03163d;
+    }
+
+    .hero_content {
+        position: static;
+        width: 100%;
+        padding-left: 10px;
+    }
+
+    .home_page_bgimg {
+        width: 100%;
+        /* height: auto; */
+        opacity: 0;
+        transform: translateY(40px);
+        transition: transition 1s ease,
+            opacity 1s ease;
+    }
+
+    .home_page_bgimg.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* shop by category */
+.category {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 6%;
+    background-color: #f5f8fc;
+}
+
+.subtitle {
+    /* margin-top: 10px; */
+    margin-bottom: 40px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 16px;
+}
+
+.card_container {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 30px;
+}
+
+.category h3 {
+    margin-top: 0px;
+    font-size: 32px;
+    color: #03163d;
+    font-weight: 700;
+    text-align: center;
+    /* margin-left: 30px; */
+}
+
+.cards {
+    min-width: 200px;
+    min-height: 250px;
+    padding: 20px;
+    background-color: #ffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.cards:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.gaming_cardimg {
+    width: 200px;
+    min-height: 200px;
+    /* object-fit: contain; */
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #4585c5;
+}
+
+.tag_line {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.category button {
+    margin: 10px;
+    background-color: #225fe3;
+    border: none;
+    color: #ffff;
+    padding: 8px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: transform 0.5s ease;
+}
+
+.category button:hover {
+    border-radius: 5px;
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+.gaming_cardimg {
+    transition: transform 0.5s ease;
+}
+
+.cards:hover .gaming_cardimg {
+    transform: scale(1.05);
+}
+
+/* tab-view */
+@media(max-width:900px) {
+    /* .cards {
+        min-width: 50px;
+        min-height: 200px;
+    } */
+
+    .card_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gaming_cardimg {
+        width: 400px;
+        min-height: 200px;
+        /* object-fit: contain; */
+    }
+
+    .category button {
+        margin: 20px;
+    }
+
+}
+
+/* mobile view */
+@media(max-width:768px) {
+    .card_container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .category button {
+        margin: 20px;
+    }
+
+    .gaming_cardimg {
+        width: 340px;
+        min-height: 270px;
+        /* object-fit: contain; */
+    }
+
+
+}

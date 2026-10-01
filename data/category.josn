@@ -1,0 +1,23 @@
+[
+  {
+    "type": "gaming",
+    "title": "Gaming Laptops",
+    "tagline": "Power • Performance",
+    "image": "../images/categories/gaming.jpg",
+     "page":"../products.html?category=laptops&type=gaming"
+  },
+  {
+    "type": "business",
+    "title": "Business Laptops",
+    "tagline": "Work • Productivity",
+    "image": "../images/categories/business.jpg",
+     "page":"../products.html?category=laptops&type=business"
+  },
+  {
+    "type": "student",
+    "title": "Student Laptops",
+    "tagline": "Learn • Everyday Use",
+    "image": "../images/categories/study.jpg",
+    "page":"../products.html?category=laptops&type=student"
+  }
+]
